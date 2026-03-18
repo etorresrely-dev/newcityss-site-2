@@ -1,338 +1,159 @@
-:root{
-  --bg:#08121f;
-  --bg-deep:#040912;
-  --gold:#cba234;
-  --gold-soft:#e1c16f;
-  --text:#f5f5f1;
-  --muted:#dbc38d;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New City Smart Solutions LLC | Engineering Smart Security & Infrastructure Solutions</title>
+  <meta name="description" content="Integrated surveillance, access control, intercom, and AI monitoring solutions for commercial buildings, residential developments, and office properties." />
+  <meta property="og:title" content="New City Smart Solutions LLC" />
+  <meta property="og:description" content="Engineering Smart Security & Infrastructure Solutions" />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta name="theme-color" content="#08121f" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-*{
-  box-sizing:border-box;
-}
+  <header class="site-header">
+    <div class="container header-shell">
+      <a class="brand" href="#home" aria-label="New City Smart Solutions LLC Home">
+        <img src="logo-primary.png" alt="New City Smart Solutions LLC logo" class="brand-logo" />
+      </a>
 
-html{
-  scroll-behavior:smooth;
-}
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-body{
-  margin:0;
-  font-family:"Inter",Arial,sans-serif;
-  color:var(--text);
-  background:linear-gradient(180deg,var(--bg) 0%,var(--bg-deep) 100%);
-}
+      <div class="header-contact">
+        <a class="header-phone" href="tel:+18006072918">800-607-2918</a>
+      </div>
+    </div>
+  </header>
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
+  <main id="home">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-network"></div>
 
-img{
-  display:block;
-  max-width:100%;
-}
+      <div class="container hero-inner">
+        <h1>Engineering Smart Security<br>&amp; Infrastructure Solutions</h1>
 
-.container{
-  width:min(1180px,calc(100% - 32px));
-  margin:0 auto;
-}
+        <p class="hero-subtitle">
+          Integrated Surveillance &nbsp;•&nbsp; Access Control &nbsp;•&nbsp; Intercom &nbsp;•&nbsp; AI Monitoring
+        </p>
 
-.narrow{
-  width:min(900px,calc(100% - 32px));
-  margin:0 auto;
-}
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Request Site Survey</a>
+          <a class="btn btn-outline" href="#contact">Get a Quote</a>
+        </div>
+      </div>
+    </section>
 
-.site-header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:100;
-  background:rgba(5,12,22,.92);
-  border-bottom:1px solid rgba(203,162,52,.12);
-  backdrop-filter:blur(10px);
-}
+    <section id="about" class="mission section">
+      <div class="container narrow">
+        <div class="section-line"></div>
+        <h2>Our Mission</h2>
+        <p>
+          To design and deploy intelligent security and infrastructure systems that protect businesses,
+          safeguard investments, and deliver reliable performance when it matters most.
+        </p>
+      </div>
+    </section>
 
-.header-shell{
-  min-height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  padding:12px 0;
-}
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="cards">
+          <article class="card">
+            <img src="service-surveillance.png" alt="Surveillance systems" />
+            <div class="card-copy">
+              <h3>Surveillance Systems</h3>
+              <p>AI Cameras • Remote Monitoring</p>
+            </div>
+          </article>
 
-.brand-logo{
-  width:180px;
-  height:auto;
-}
+          <article class="card">
+            <img src="service-access.png" alt="Access control" />
+            <div class="card-copy">
+              <h3>Access Control</h3>
+              <p>Keycards • Biometrics</p>
+            </div>
+          </article>
 
-.main-nav{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
+          <article class="card">
+            <img src="service-intercom.png" alt="Intercom systems" />
+            <div class="card-copy">
+              <h3>Intercom Systems</h3>
+              <p>Multi-Tenant • Office Buildings</p>
+            </div>
+          </article>
 
-.main-nav a{
-  font-weight:600;
-  color:rgba(255,255,255,.92);
-}
+          <article class="card">
+            <img src="service-ai.png" alt="AI monitoring" />
+            <div class="card-copy">
+              <h3>AI Monitoring</h3>
+              <p>Advanced Analytics • Threat Detection</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.header-phone{
-  color:var(--gold-soft);
-  font-weight:700;
-  white-space:nowrap;
-}
+    <section class="industries section">
+      <div class="container">
+        <div class="section-line"></div>
+        <h2>Industries We Serve</h2>
+        <div class="industries-grid">
+          <div>Commercial Buildings</div>
+          <div>Residential Developments</div>
+          <div>Retail Centers</div>
+          <div>Office Campuses</div>
+          <div>Hospitality &amp; Hotels</div>
+        </div>
+      </div>
+    </section>
 
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:160px 0 100px;
-  background:
-    linear-gradient(180deg, rgba(4,10,18,.22), rgba(4,10,18,.78)),
-    url('hero-city.webp') center center/cover no-repeat;
-}
+    <section id="contact" class="cta section">
+      <div class="container narrow">
+        <div class="section-line"></div>
+        <h2>Upgrade Your Property’s Security Infrastructure</h2>
 
-.hero-overlay{
-  display:none;
-}
+        <p class="contact-line">
+          <a href="tel:+18006072918">800-607-2918</a>
+          <span>•</span>
+          <a href="mailto:info@newcityss.com">info@newcityss.com</a>
+          <span>•</span>
+          <a href="mailto:support@newcityss.com">support@newcityss.com</a>
+        </p>
 
-.hero-inner{
-  max-width:900px;
-}
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="mailto:info@newcityss.com?subject=Request%20Site%20Survey">Request Site Survey</a>
+          <a class="btn btn-outline" href="mailto:support@newcityss.com?subject=Support%20Request">Contact Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.hero h1{
-  margin:0;
-  font-size:clamp(2.3rem,6vw,4.6rem);
-  line-height:1.1;
-  letter-spacing:-0.03em;
-}
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <img src="logo-primary.png" alt="New City Smart Solutions LLC logo" class="footer-logo" />
 
-.hero-subtitle{
-  margin:22px auto 0;
-  max-width:820px;
-  font-size:clamp(1rem,2.2vw,1.35rem);
-  line-height:1.6;
-  color:#e6d3a3;
-}
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-.hero-actions{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:16px;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:200px;
-  padding:15px 24px;
-  border-radius:8px;
-  font-weight:700;
-  font-size:1rem;
-}
-
-.btn-gold{
-  background:linear-gradient(180deg,#e0bb68 0%,#c4933f 100%);
-  color:#12151c;
-}
-
-.btn-outline{
-  border:1px solid rgba(203,162,52,.45);
-  background:rgba(8,14,24,.35);
-  color:var(--text);
-}
-
-.section{
-  padding:70px 0;
-  text-align:center;
-  background:
-    linear-gradient(180deg, rgba(6,11,19,.18), rgba(6,11,19,.82));
-}
-
-.section-line{
-  height:2px;
-  width:min(820px,88%);
-  margin:0 auto 18px;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(203,162,52,.12) 20%,
-    rgba(203,162,52,.45) 50%,
-    rgba(203,162,52,.12) 80%,
-    transparent 100%
-  );
-}
-
-.section h2{
-  margin:0;
-  font-size:clamp(1.8rem,4vw,2.8rem);
-  color:#e8d29d;
-}
-
-.section p{
-  max-width:900px;
-  margin:18px auto 0;
-  font-size:clamp(1rem,1.8vw,1.2rem);
-  line-height:1.7;
-  color:rgba(255,255,255,.9);
-}
-
-.cards{
-  margin-top:28px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.card{
-  overflow:hidden;
-  background:linear-gradient(180deg, rgba(9,16,28,.8), rgba(6,11,19,.95));
-  border:1px solid rgba(203,162,52,.14);
-  border-radius:12px;
-}
-
-.card img{
-  width:100%;
-  aspect-ratio:1.4/1;
-  object-fit:cover;
-}
-
-.card-copy{
-  padding:18px 16px 20px;
-}
-
-.card-copy h3{
-  margin:0;
-  font-size:1.35rem;
-  color:#e6cb8b;
-}
-
-.card-copy p{
-  margin-top:8px;
-  font-size:.98rem;
-  color:rgba(255,255,255,.82);
-}
-
-.industries-grid{
-  margin-top:28px;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:12px;
-}
-
-.industries-grid div{
-  min-height:100px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:18px;
-  font-size:1.05rem;
-  color:#eccd8c;
-  background:rgba(8,14,24,.32);
-  border:1px solid rgba(203,162,52,.12);
-  border-radius:10px;
-}
-
-.contact-line{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-  color:#f0d08b;
-}
-
-.contact-line a{
-  color:#f3d89d;
-}
-
-.site-footer{
-  padding:34px 0 44px;
-  border-top:1px solid rgba(203,162,52,.08);
-  background:rgba(4,9,16,.95);
-}
-
-.footer-shell{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:18px;
-}
-
-.footer-logo{
-  width:min(260px,72vw);
-}
-
-.footer-nav{
-  display:flex;
-  gap:24px;
-  flex-wrap:wrap;
-  justify-content:center;
-  color:rgba(255,255,255,.82);
-}
-
-.site-footer p{
-  margin:0;
-  color:rgba(255,255,255,.54);
-}
-
-@media (max-width:980px){
-  .cards{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .industries-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media (max-width:700px){
-  .header-shell{
-    justify-content:center;
-  }
-
-  .brand-logo{
-    width:160px;
-  }
-
-  .main-nav{
-    gap:14px;
-  }
-
-  .hero{
-    padding:170px 0 90px;
-  }
-
-  .hero h1{
-    font-size:2.1rem;
-  }
-
-  .hero-subtitle{
-    font-size:1rem;
-  }
-
-  .btn{
-    width:100%;
-    min-width:0;
-  }
-
-  .cards,
-  .industries-grid{
-    grid-template-columns:1fr;
-  }
-
-  .industries-grid div{
-    min-height:84px;
-  }
-}
+      <p>© 2026 New City Smart Solutions LLC. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
