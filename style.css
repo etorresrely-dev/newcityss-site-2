@@ -49,12 +49,10 @@ img{display:block;max-width:100%}
   position:fixed;
   inset:0 0 auto 0;
   z-index:30;
-  background:
-    linear-gradient(180deg, rgba(5,12,22,.97) 0%, rgba(5,12,22,.92) 68%, rgba(5,12,22,.78) 100%);
-  border-bottom:1px solid rgba(203,162,52,.10);
-  box-shadow:0 4px 18px rgba(0,0,0,.18);
-  backdrop-filter:blur(10px);
-}
+  background:rgba(6,12,22,.88);
+  border-bottom:1px solid rgba(203,162,52,.16);
+  backdrop-filter:blur(8px);
+}}
 
 .header-shell{
   min-height:82px;
