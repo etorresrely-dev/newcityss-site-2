@@ -65,9 +65,8 @@ img{display:block;max-width:100%}
 }
 
 .brand-logo{
-  width:150px;  max-width:100%;
-  height:auto;
-  object-fit:contain;
+  width:150px;
+  background:transparent;
 }}
 
 .main-nav{
