@@ -46,11 +46,7 @@ img{display:block;max-width:100%}
 }
 
 .site-header{
-  position:fixed;
-  inset:0 0 auto 0;
-  z-index:30;
-  background:rgba(6,12,22,.88);
-  border-bottom:1px solid rgba(203,162,52,.16);
+  background:rgba(6,12,22,.85);  border-bottom:1px solid rgba(203,162,52,.16);
   backdrop-filter:blur(8px);
 }}
 
