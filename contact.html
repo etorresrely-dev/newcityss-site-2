@@ -2,64 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | New City Smart Solutions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-shell">
+
     <div class="brand">
-      <img src="logo-primary.png" class="brand-logo" />
+      <img src="logo-primary.png" class="brand-logo" alt="New City Smart Solutions logo" />
     </div>
 
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="ai-automation.html">AI</a>
+      <a href="security-systems.html">Security</a>
       <a href="contact.html">Contact</a>
     </nav>
 
     <div class="header-phone">800-607-2918</div>
+
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
 
     <h1>Get a Free Quote</h1>
 
     <p>
-      Tell us about your project and we’ll get back to you.
+      Tell us what you need — we’ll recommend the right security or automation solution.
     </p>
 
   </div>
 </section>
 
+<!-- FORM -->
 <section class="services">
 
   <form name="contact" method="POST" data-netlify="true">
 
+    <!-- REQUIRED FOR NETLIFY -->
     <input type="hidden" name="form-name" value="contact">
 
+    <!-- NAME -->
     <div class="service-card">
-      <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px;">
+      <input type="text" name="name" placeholder="Your Name" required>
     </div>
 
+    <!-- EMAIL -->
     <div class="service-card">
-      <input type="email" name="email" placeholder="Email" required style="width:100%; padding:10px;">
+      <input type="email" name="email" placeholder="Email Address" required>
     </div>
 
+    <!-- PHONE -->
     <div class="service-card">
-      <input type="text" name="phone" placeholder="Phone Number" style="width:100%; padding:10px;">
+      <input type="text" name="phone" placeholder="Phone Number">
     </div>
 
+    <!-- MESSAGE -->
     <div class="service-card">
-      <textarea name="message" placeholder="What do you need?" style="width:100%; padding:10px;"></textarea>
+      <textarea name="message" placeholder="What do you need help with?"></textarea>
     </div>
 
+    <!-- CTA -->
     <div class="buttons">
       <button class="btn gold" type="submit">Request Quote</button>
+      <a href="tel:18006072918" class="btn outline">Call Now</a>
     </div>
 
   </form>
