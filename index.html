@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>New City Smart Solutions LLC</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-shell">
 
+    <!-- LEFT: LOGO -->
     <div class="brand">
       <img src="logo-primary.png" class="brand-logo" />
     </div>
 
-    <!-- MOBILE MENU BUTTON -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
+    <!-- MIDDLE: NAV -->
     <nav class="main-nav" id="nav">
       <a href="#">Home</a>
       <a href="#">Services</a>
@@ -26,6 +28,7 @@
       <a href="#">Contact</a>
     </nav>
 
+    <!-- RIGHT: PHONE -->
     <div class="header-phone">
       800-607-2918
     </div>
@@ -33,30 +36,74 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
 
     <h1>
-      Engineering Smart Security<br>
-      & Infrastructure Solutions
+      Smart Security & AI Systems for Modern Businesses
     </h1>
 
     <p>
-      Surveillance • Access Control • Intercom • AI Monitoring
+      Cameras, access control, intercom, and AI automation to protect, monitor, and streamline your business.
     </p>
 
     <div class="buttons">
-      <a class="btn gold">Request Site Survey</a>
-      <a class="btn outline">Get a Quote</a>
+      <a class="btn gold">Get Free Quote</a>
+      <a class="btn outline">Call Now</a>
     </div>
+
+    <p style="margin-top:15px; font-size:13px; color:#ccc;">
+      Commercial • Residential • Small Business Solutions
+    </p>
 
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="services">
+
+  <h2>Our Solutions</h2>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <h3>Security Systems</h3>
+      <p>
+        Cameras and monitoring systems to protect your property 24/7.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Access Control</h3>
+      <p>
+        Keycard, mobile, and biometric entry systems for full control.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Intercom Systems</h3>
+      <p>
+        Smart building entry systems for homes and businesses.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>AI Automation</h3>
+      <p>
+        Automate alerts, monitoring, and workflows using smart AI systems.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCRIPT -->
 <script>
-function toggleMenu(){
-  document.getElementById("nav").classList.toggle("active");
-}
+  function toggleMenu(){
+    document.getElementById("nav").classList.toggle("active");
+  }
 </script>
 
 </body>
