@@ -28,8 +28,13 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
+
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+
   padding:12px 20px;
-}
+}}
 
 /* LOGO */
 .brand-logo{
@@ -39,8 +44,10 @@ body{
 /* NAV */
 .main-nav{
   display:flex;
-  gap:25px;
-}
+  gap:30px;
+  justify-content:center;
+  flex:1;
+}}
 
 .main-nav a{
   color:white;
