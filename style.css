@@ -18,11 +18,11 @@ body{
 
 .site-header{
   position:fixed;
+  top:0;
   width:100%;
-  background:rgba(0,0,0,0.4);
-  backdrop-filter:blur(6px);
+  background:transparent;
   z-index:100;
-}
+}}
 
 .header-shell{
   display:flex;
