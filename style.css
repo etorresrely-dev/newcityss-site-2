@@ -1,58 +1,70 @@
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  color:white;
-  background:black;
+:root{
+  --gold:#cba234;
+  --text:#fff;
 }
 
-/* HEADER */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:white;
+}
+
+/* ================= HEADER ================= */
+
 .site-header{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(0,0,0,0.3);
+  background:rgba(0,0,0,0.4);
   backdrop-filter:blur(6px);
   z-index:100;
 }
 
 .header-shell{
-  display:grid;
-  grid-template-columns:auto 1fr auto;
+  display:flex;
   align-items:center;
-  height:65px;
-  padding:0 40px;
+  justify-content:space-between;
+  padding:12px 20px;
 }
 
 /* LOGO */
 .brand-logo{
-  width:150px;
+  width:130px;
 }
 
-/* NAV */
+/* NAV (DESKTOP) */
 .main-nav{
   display:flex;
-  justify-content:center;
-  gap:30px;
+  gap:25px;
 }
 
 .main-nav a{
   color:white;
   text-decoration:none;
+  font-size:14px;
 }
 
 /* PHONE */
 .header-phone{
-  color:gold;
+  color:var(--gold);
   font-weight:bold;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
-  height:100vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
+  padding:100px 20px 60px;
 
   background:
     linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)),
@@ -60,36 +72,87 @@ body{
 }
 
 .hero-inner{
-  max-width:800px;
+  max-width:700px;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:32px;
+  line-height:1.2;
 }
 
 .hero p{
-  margin:20px 0;
-  color:gold;
+  margin:15px 0;
+  font-size:14px;
+  color:var(--gold);
 }
 
 /* BUTTONS */
 .buttons{
   display:flex;
-  justify-content:center;
-  gap:15px;
+  flex-direction:column;
+  gap:12px;
+  margin-top:20px;
 }
 
 .btn{
-  padding:12px 25px;
-  border-radius:4px;
-  cursor:pointer;
+  padding:14px;
+  border-radius:6px;
+  text-align:center;
+  font-weight:bold;
 }
 
 .gold{
-  background:gold;
+  background:var(--gold);
   color:black;
 }
 
 .outline{
-  border:1px solid gold;
+  border:1px solid var(--gold);
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:768px){
+
+  .header-shell{
+    padding:15px 40px;
+  }
+
+  .brand-logo{
+    width:150px;
+  }
+
+  .main-nav{
+    gap:30px;
+  }
+
+  .hero{
+    padding-top:120px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .buttons{
+    flex-direction:row;
+    justify-content:center;
+  }
+}
+
+/* ================= MOBILE NAV FIX ================= */
+
+@media(max-width:768px){
+
+  .main-nav{
+    display:none;
+  }
+
+  .header-phone{
+    font-size:12px;
+  }
 }
