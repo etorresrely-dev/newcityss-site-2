@@ -46,7 +46,9 @@
 <!-- FORM -->
 <section class="services">
 
-  <form name="contact" method="POST" action="/thank-you.html" data-netlify="true">    <!-- REQUIRED FOR NETLIFY -->
+  <form name="contact" method="POST" action="/thank-you.html" data-netlify="true">
+
+    <!-- NETLIFY REQUIRED -->
     <input type="hidden" name="form-name" value="contact">
 
     <!-- NAME -->
@@ -66,7 +68,7 @@
 
     <!-- MESSAGE -->
     <div class="service-card">
-      <textarea name="message" placeholder="What do you need help with?"></textarea>
+      <textarea name="message" placeholder="What do you need help with?" required></textarea>
     </div>
 
     <!-- CTA -->
@@ -74,6 +76,11 @@
       <button class="btn gold" type="submit">Request Quote</button>
       <a href="tel:18006072918" class="btn outline">Call Now</a>
     </div>
+
+    <!-- TRUST LINE -->
+    <p style="margin-top:15px; font-size:13px; color:#ccc; text-align:center;">
+      We typically respond within 24 hours
+    </p>
 
   </form>
 
