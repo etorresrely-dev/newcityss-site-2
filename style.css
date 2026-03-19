@@ -2,10 +2,11 @@
   --gold:#cba234;
   --gold-soft:#e1c16f;
   --bg:#000;
-  --bg-card:#111;
-  --text:#fff;
+  --bg-card:#101010;
+  --text:#ffffff;
   --muted:#cfcfcf;
   --border:rgba(255,255,255,0.10);
+  --max:1200px;
 }
 
 /* RESET */
@@ -43,7 +44,7 @@ img{
   top:0;
   left:0;
   width:100%;
-  background:rgba(0,0,0,0.20);
+  background:rgba(0,0,0,0.18);
   z-index:100;
 }
 
@@ -52,10 +53,10 @@ img{
   align-items:center;
   justify-content:space-between;
   width:100%;
-  max-width:1200px;
+  max-width:var(--max);
   margin:0 auto;
-  padding:12px 20px;
-  gap:20px;
+  padding:14px 24px;
+  gap:24px;
 }
 
 .brand{
@@ -65,7 +66,7 @@ img{
 }
 
 .brand-logo{
-  width:140px;
+  width:150px;
   height:auto;
 }
 
@@ -74,13 +75,14 @@ img{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:30px;
+  gap:32px;
 }
 
 .main-nav a{
   color:var(--text);
   font-size:14px;
   font-weight:600;
+  letter-spacing:0.02em;
   transition:opacity 0.2s ease;
 }
 
@@ -92,8 +94,10 @@ img{
   flex:1;
   text-align:right;
   color:var(--gold);
-  font-weight:bold;
+  font-weight:700;
   white-space:nowrap;
+  font-size:14px;
+  letter-spacing:0.02em;
 }
 
 /* ================= HERO ================= */
@@ -104,53 +108,54 @@ img{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:120px 20px 60px;
+  padding:132px 24px 72px;
   background:
-    linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.88)),
+    linear-gradient(rgba(0,0,0,0.34), rgba(0,0,0,0.88)),
     url("hero-city.webp") center/cover no-repeat;
 }
 
 .hero-inner{
   width:100%;
-  max-width:800px;
+  max-width:860px;
 }
 
 .hero h1{
-  font-size:34px;
-  line-height:1.15;
-  margin-bottom:16px;
+  font-size:clamp(2.4rem, 6vw, 4.5rem);
+  line-height:1.05;
+  letter-spacing:-0.03em;
+  margin-bottom:18px;
 }
 
 .hero p{
-  margin:0 auto 15px;
-  color:var(--gold);
-  max-width:720px;
+  max-width:760px;
+  margin:0 auto 18px;
+  color:var(--gold-soft);
+  font-size:clamp(1rem, 2vw, 1.2rem);
+  line-height:1.55;
 }
-
-/* ================= BUTTONS ================= */
 
 .buttons{
   display:flex;
   flex-direction:column;
-  gap:12px;
-  margin-top:20px;
+  gap:14px;
+  margin-top:26px;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:48px;
-  padding:14px 18px;
-  border-radius:6px;
-  font-weight:bold;
+  min-height:50px;
+  padding:14px 22px;
+  border-radius:8px;
+  font-weight:700;
   text-align:center;
   transition:transform 0.2s ease, opacity 0.2s ease;
 }
 
 .btn:hover{
   transform:translateY(-1px);
-  opacity:0.95;
+  opacity:0.96;
 }
 
 .gold{
@@ -167,16 +172,18 @@ img{
 /* ================= CONTENT SECTIONS ================= */
 
 .services{
-  padding:60px 20px;
-  max-width:1200px;
+  max-width:var(--max);
   margin:0 auto;
+  padding:72px 24px;
 }
 
 .services h2{
   color:var(--gold);
   text-align:center;
-  margin-bottom:30px;
-  font-size:30px;
+  margin-bottom:34px;
+  font-size:clamp(1.8rem, 3vw, 2.4rem);
+  line-height:1.1;
+  letter-spacing:-0.02em;
 }
 
 .services > p{
@@ -188,15 +195,15 @@ img{
 .service-grid{
   display:grid;
   grid-template-columns:1fr;
-  gap:20px;
+  gap:22px;
 }
 
 .service-card{
   display:block;
   background:var(--bg-card);
   border:1px solid var(--border);
-  border-radius:10px;
-  padding:22px;
+  border-radius:12px;
+  padding:26px 22px;
   transition:transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -208,18 +215,22 @@ img{
 .service-card h3{
   color:var(--gold);
   margin-bottom:10px;
-  font-size:22px;
+  font-size:1.35rem;
+  line-height:1.2;
+  letter-spacing:-0.01em;
 }
 
 .service-card p{
   color:var(--muted);
+  font-size:0.98rem;
+  line-height:1.6;
 }
 
 /* ================= FORM ================= */
 
 form{
   width:100%;
-  max-width:700px;
+  max-width:760px;
   margin:0 auto;
 }
 
@@ -232,37 +243,28 @@ button{
 input,
 textarea{
   width:100%;
-  padding:12px 14px;
+  padding:14px 16px;
   border:1px solid var(--border);
-  border-radius:6px;
+  border-radius:8px;
   background:#0b0b0b;
   color:var(--text);
 }
 
 textarea{
-  min-height:140px;
+  min-height:150px;
   resize:vertical;
 }
 
 /* ================= DESKTOP ================= */
 
-body{
-  padding-top:120px;
-}  .hero h1{
-    font-size:52px;
-  }
-
-  .hero p{
-    font-size:18px;
-  }
-
+@media (min-width:768px){
   .buttons{
     flex-direction:row;
     justify-content:center;
   }
 
   .brand-logo{
-    width:160px;
+    width:165px;
   }
 
   .service-grid{
@@ -300,23 +302,11 @@ body{
     gap:14px 18px;
   }
 
-  .header-phone{
-    display:block;
-  }
-
   .hero{
-    padding:170px 20px 60px;
-  }
-
-  .hero h1{
-    font-size:30px;
+    padding:188px 20px 64px;
   }
 
   .services{
-    padding:50px 16px;
-  }
-
-  .services h2{
-    font-size:26px;
+    padding:56px 16px;
   }
 }
