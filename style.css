@@ -20,9 +20,9 @@ body{
   position:fixed;
   top:0;
   width:100%;
-  background:transparent;
+  background:rgba(0,0,0,0.2);
   z-index:100;
-}}
+}}}
 
 .header-shell{
   display:flex;
