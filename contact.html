@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | New City Smart Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header class="site-header">
+  <div class="header-shell">
+    <div class="brand">
+      <img src="logo-primary.png" class="brand-logo" />
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-phone">800-607-2918</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+
+    <h1>Get a Free Quote</h1>
+
+    <p>
+      Tell us about your project and we’ll get back to you.
+    </p>
+
+  </div>
+</section>
+
+<section class="services">
+
+  <form name="contact" method="POST" data-netlify="true">
+
+    <input type="hidden" name="form-name" value="contact">
+
+    <div class="service-card">
+      <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px;">
+    </div>
+
+    <div class="service-card">
+      <input type="email" name="email" placeholder="Email" required style="width:100%; padding:10px;">
+    </div>
+
+    <div class="service-card">
+      <input type="text" name="phone" placeholder="Phone Number" style="width:100%; padding:10px;">
+    </div>
+
+    <div class="service-card">
+      <textarea name="message" placeholder="What do you need?" style="width:100%; padding:10px;"></textarea>
+    </div>
+
+    <div class="buttons">
+      <button class="btn gold" type="submit">Request Quote</button>
+    </div>
+
+  </form>
+
+</section>
+
+</body>
+</html>
