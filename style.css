@@ -39,7 +39,6 @@ img{
 }
 
 /* HEADER */
-
 .site-header{
   position:fixed;
   top:0;
@@ -101,8 +100,7 @@ img{
   letter-spacing:0.02em;
 }
 
-/* HERO */
-
+/* HOME HERO */
 .hero{
   min-height:100vh;
   display:flex;
@@ -118,6 +116,8 @@ img{
 .hero-inner{
   width:100%;
   max-width:860px;
+  position:relative;
+  z-index:2;
 }
 
 .hero h1{
@@ -135,8 +135,49 @@ img{
   line-height:1.55;
 }
 
-/* BUTTONS */
+/* SERVICE HERO */
+.service-hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  padding:140px 24px 80px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
 
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.82));
+}
+
+.service-hero .hero-inner{
+  width:100%;
+  max-width:860px;
+  position:relative;
+  z-index:2;
+}
+
+.service-hero h1{
+  font-size:clamp(2.3rem, 6vw, 4rem);
+  line-height:1.08;
+  letter-spacing:-0.03em;
+  margin-bottom:12px;
+}
+
+.service-hero p{
+  color:var(--gold-soft);
+  font-size:clamp(1rem, 2vw, 1.18rem);
+  line-height:1.5;
+  margin:0 auto 18px;
+  max-width:720px;
+}
+
+/* BUTTONS */
 .buttons{
   display:flex;
   flex-direction:column;
@@ -173,7 +214,6 @@ img{
 }
 
 /* SECTIONS */
-
 .services{
   max-width:var(--max);
   margin:0 auto;
@@ -194,7 +234,6 @@ img{
 }
 
 /* GRID */
-
 .service-grid{
   display:grid;
   grid-template-columns:1fr;
@@ -230,7 +269,6 @@ img{
 }
 
 /* FORM */
-
 form{
   width:100%;
   max-width:760px;
@@ -259,7 +297,6 @@ textarea{
 }
 
 /* FOOTER */
-
 .site-footer{
   background:var(--bg-footer);
   border-top:1px solid var(--border);
@@ -323,13 +360,11 @@ textarea{
 }
 
 /* MOBILE CALL BAR */
-
 .mobile-call-bar{
   display:none;
 }
 
 /* DESKTOP */
-
 @media (min-width:768px){
   .buttons{
     flex-direction:row;
@@ -357,7 +392,6 @@ textarea{
 }
 
 /* MOBILE */
-
 @media (max-width:768px){
   .header-shell{
     flex-direction:column;
@@ -382,6 +416,11 @@ textarea{
 
   .hero{
     padding:188px 20px 64px;
+  }
+
+  .service-hero{
+    padding:190px 20px 72px;
+    min-height:62vh;
   }
 
   .services{
@@ -414,37 +453,4 @@ textarea{
     z-index:200;
     box-shadow:0 10px 30px rgba(0,0,0,0.35);
   }
-}/* SERVICE HERO */
-
-.service-hero{
-  min-height:70vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-  padding:140px 20px 80px;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85));
-}
-
-.service-hero .hero-inner{
-  position:relative;
-  z-index:2;
-  max-width:800px;
-}
-
-.service-hero h1{
-  font-size:clamp(2.5rem, 6vw, 4rem);
-  margin-bottom:10px;
-}
-
-.service-hero p{
-  color:var(--gold);
-  font-size:18px;
-  margin-bottom:20px;
 }
