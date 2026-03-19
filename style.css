@@ -44,7 +44,7 @@ img{
   top:0;
   left:0;
   width:100%;
-  background:rgba(0,0,0,0.18);
+  background:rgba(0,0,0,0.45);
   z-index:100;
 }
 
@@ -432,7 +432,7 @@ textarea{
   }
 
   .hero{
-    padding:260px 20px 64px;
+    padding:210px 20px 64px;
   }
 
   .hero h1{
@@ -446,7 +446,7 @@ textarea{
   }
 
   .service-hero{
-    padding:250px 20px 72px;
+    padding:200px 20px 72px;
     min-height:62vh;
   }
 
@@ -484,4 +484,4 @@ textarea{
     z-index:200;
     box-shadow:0 10px 30px rgba(0,0,0,0.35);
   }
-}
+}}
