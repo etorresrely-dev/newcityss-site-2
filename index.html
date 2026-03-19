@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>New City Smart Solutions LLC</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,7 +16,10 @@
       <img src="logo-primary.png" class="brand-logo" />
     </div>
 
-    <nav class="main-nav">
+    <!-- MOBILE MENU BUTTON -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav class="main-nav" id="nav">
       <a href="#">Home</a>
       <a href="#">Services</a>
       <a href="#">About</a>
@@ -34,15 +35,29 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <h1>Engineering Smart Security<br>& Infrastructure Solutions</h1>
-    <p>Integrated Surveillance • Access Control • Intercom • AI Monitoring</p>
+
+    <h1>
+      Engineering Smart Security<br>
+      & Infrastructure Solutions
+    </h1>
+
+    <p>
+      Surveillance • Access Control • Intercom • AI Monitoring
+    </p>
 
     <div class="buttons">
       <a class="btn gold">Request Site Survey</a>
       <a class="btn outline">Get a Quote</a>
     </div>
+
   </div>
 </section>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
