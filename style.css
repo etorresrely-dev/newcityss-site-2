@@ -246,8 +246,9 @@ textarea{
 
 /* ================= DESKTOP ================= */
 
-@media (min-width:768px){
-  .hero h1{
+body{
+  padding-top:120px;
+}  .hero h1{
     font-size:52px;
   }
 
