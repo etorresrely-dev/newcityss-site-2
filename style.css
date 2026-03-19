@@ -127,6 +127,8 @@ img{
   max-width:720px;
 }
 
+/* ================= BUTTONS ================= */
+
 .buttons{
   display:flex;
   flex-direction:column;
@@ -162,7 +164,7 @@ img{
   background:transparent;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= CONTENT SECTIONS ================= */
 
 .services{
   padding:60px 20px;
@@ -175,6 +177,10 @@ img{
   text-align:center;
   margin-bottom:30px;
   font-size:30px;
+}
+
+.services > p{
+  color:var(--muted);
 }
 
 /* ================= SERVICE GRID ================= */
@@ -241,7 +247,6 @@ textarea{
 /* ================= DESKTOP ================= */
 
 @media (min-width:768px){
-
   .hero h1{
     font-size:52px;
   }
@@ -273,7 +278,6 @@ textarea{
 /* ================= MOBILE ================= */
 
 @media (max-width:768px){
-
   .header-shell{
     flex-direction:column;
     align-items:center;
