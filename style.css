@@ -1,12 +1,17 @@
 :root{
   --gold:#cba234;
   --gold-soft:#e1c16f;
-  --bg:#000;
-  --bg-card:#101010;
-  --bg-footer:#070707;
+
+  /* premium navy palette */
+  --bg:#0a1420;
+  --bg-deep:#06101a;
+  --bg-card:#0f1c2b;
+  --bg-footer:#07111b;
+
   --text:#ffffff;
-  --muted:#cfcfcf;
-  --border:rgba(255,255,255,0.10);
+  --muted:#c6cfda;
+  --border:rgba(255,255,255,0.08);
+
   --max:1200px;
 }
 
@@ -23,7 +28,7 @@ html{
 
 body{
   font-family:Arial, sans-serif;
-  background:var(--bg);
+  background:linear-gradient(180deg,var(--bg),var(--bg-deep));
   color:var(--text);
   line-height:1.5;
 }
@@ -44,7 +49,7 @@ img{
   top:0;
   left:0;
   width:100%;
-  background:rgba(0,0,0,0.22);
+  background:rgba(7,17,27,0.48);
   z-index:100;
 }
 
@@ -107,9 +112,9 @@ img{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:132px 24px 72px;
+  padding:132px 24px 88px;
   background:
-    linear-gradient(rgba(0,0,0,0.34), rgba(0,0,0,0.88)),
+    linear-gradient(rgba(6,16,26,0.35), rgba(6,16,26,0.90)),
     url("hero-city.webp") center/cover no-repeat;
 }
 
@@ -131,7 +136,7 @@ img{
   max-width:760px;
   margin:0 auto 18px;
   color:var(--gold-soft);
-  font-size:clamp(1rem, 2vw, 1.2rem);
+  font-size:clamp(1rem, 2vw, 1.18rem);
   line-height:1.55;
 }
 
@@ -143,7 +148,7 @@ img{
   justify-content:center;
   text-align:center;
   position:relative;
-  padding:140px 24px 80px;
+  padding:140px 24px 88px;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -152,7 +157,7 @@ img{
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.82));
+  background:linear-gradient(rgba(6,16,26,0.34), rgba(6,16,26,0.84));
 }
 
 .service-hero .hero-inner{
@@ -171,7 +176,7 @@ img{
 
 .service-hero p{
   color:var(--gold-soft);
-  font-size:clamp(1rem, 2vw, 1.18rem);
+  font-size:clamp(1rem, 2vw, 1.12rem);
   line-height:1.5;
   margin:0 auto 18px;
   max-width:720px;
@@ -191,7 +196,7 @@ img{
   justify-content:center;
   min-height:50px;
   padding:14px 22px;
-  border-radius:8px;
+  border-radius:10px;
   font-weight:700;
   text-align:center;
   transition:transform 0.2s ease, opacity 0.2s ease;
@@ -217,13 +222,13 @@ img{
 .services{
   max-width:var(--max);
   margin:0 auto;
-  padding:72px 24px;
+  padding:84px 24px;
 }
 
 .services h2{
   color:var(--gold);
   text-align:center;
-  margin-bottom:34px;
+  margin-bottom:36px;
   font-size:clamp(1.8rem, 3vw, 2.4rem);
   line-height:1.1;
   letter-spacing:-0.02em;
@@ -242,251 +247,8 @@ img{
 
 .service-card{
   display:block;
-  background:var(--bg-card);
+  background:linear-gradient(180deg, rgba(15,28,43,0.92), rgba(10,20,32,0.96));
   border:1px solid var(--border);
-  border-radius:12px;
+  border-radius:14px;
   padding:26px 22px;
-  transition:transform 0.2s ease, border-color 0.2s ease;
-}
-
-.service-card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(203,162,52,0.45);
-}
-
-.service-card h3{
-  color:var(--gold);
-  margin-bottom:10px;
-  font-size:1.35rem;
-  line-height:1.2;
-  letter-spacing:-0.01em;
-}
-
-.service-card p{
-  color:var(--muted);
-  font-size:0.98rem;
-  line-height:1.6;
-}
-
-/* FORM */
-form{
-  width:100%;
-  max-width:760px;
-  margin:0 auto;
-}
-
-input,
-textarea,
-button{
-  font:inherit;
-}
-
-input,
-textarea{
-  width:100%;
-  padding:14px 16px;
-  border:1px solid var(--border);
-  border-radius:8px;
-  background:#0b0b0b;
-  color:var(--text);
-}
-
-textarea{
-  min-height:150px;
-  resize:vertical;
-}
-
-/* FOOTER */
-.site-footer{
-  background:var(--bg-footer);
-  border-top:1px solid var(--border);
-  margin-top:20px;
-}
-
-.footer-shell{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:56px 24px 28px;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:28px;
-}
-
-.footer-brand{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.footer-logo{
-  width:170px;
-  height:auto;
-}
-
-.footer-copy{
-  color:var(--muted);
-  max-width:340px;
-  font-size:0.95rem;
-  line-height:1.6;
-}
-
-.footer-column{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.footer-column h3{
-  color:var(--gold);
-  font-size:1rem;
-  margin-bottom:4px;
-}
-
-.footer-column a{
-  color:var(--muted);
-  transition:color 0.2s ease;
-}
-
-.footer-column a:hover{
-  color:var(--text);
-}
-
-.footer-bottom{
-  border-top:1px solid var(--border);
-  padding:18px 24px calc(18px + env(safe-area-inset-bottom, 0px));
-  text-align:center;
-  color:var(--muted);
-  font-size:0.9rem;
-}
-
-/* MOBILE CALL BAR */
-.mobile-call-bar{
-  display:none;
-}
-
-/* DESKTOP */
-@media (min-width:768px){
-  .buttons{
-    flex-direction:row;
-    justify-content:center;
-  }
-
-  .brand-logo{
-    width:165px;
-  }
-
-  .service-grid{
-    grid-template-columns:repeat(2, 1fr);
-  }
-
-  .footer-shell{
-    grid-template-columns:1.2fr 1fr 1fr 1fr;
-    align-items:start;
-  }
-}
-
-@media (min-width:1024px){
-  .service-grid{
-    grid-template-columns:repeat(4, 1fr);
-  }
-}
-
-/* MOBILE */
-@media (max-width:768px){
-  .site-header{
-    position:sticky;
-    top:0;
-    background:rgba(0,0,0,0.82);
-    backdrop-filter:none;
-  }
-
-  .header-shell{
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-    padding:10px 16px 12px;
-  }
-
-  .brand,
-  .main-nav,
-  .header-phone{
-    flex:none;
-    width:100%;
-    justify-content:center;
-    text-align:center;
-  }
-
-  .brand-logo{
-    width:132px;
-    margin:0 auto;
-  }
-
-  .main-nav{
-    flex-wrap:wrap;
-    gap:8px 14px;
-  }
-
-  .main-nav a{
-    font-size:12px;
-    line-height:1.2;
-  }
-
-  .header-phone{
-    display:none;
-  }
-
-  .hero{
-    min-height:auto;
-    padding:72px 20px 64px;
-  }
-
-  .hero h1{
-    font-size:clamp(2rem, 8vw, 3.2rem);
-    line-height:1.08;
-  }
-
-  .hero p{
-    font-size:1rem;
-    line-height:1.5;
-  }
-
-  .service-hero{
-    min-height:auto;
-    padding:72px 20px 64px;
-  }
-
-  .service-hero h1{
-    font-size:clamp(2rem, 8vw, 3rem);
-  }
-
-  .services{
-    padding:56px 16px;
-  }
-
-  .footer-shell{
-    padding:48px 16px 24px;
-  }
-
-  .footer-bottom{
-    padding:16px 16px calc(82px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .mobile-call-bar{
-    position:fixed;
-    left:16px;
-    right:16px;
-    bottom:calc(16px + env(safe-area-inset-bottom, 0px));
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:54px;
-    padding:14px 18px;
-    border-radius:999px;
-    background:var(--gold);
-    color:#000;
-    font-weight:800;
-    font-size:15px;
-    z-index:200;
-    box-shadow:0 10px 30px rgba(0,0,0,0.35);
-  }
-}
+  transition:
