@@ -557,4 +557,39 @@ textarea{
     z-index:200;
     box-shadow:0 12px 30px rgba(0,0,0,0.35);
   }
+}/* SIMPLE MOBILE MENU FIX */
+.menu-button{
+  display:none;
+}
+
+/* ONLY on phone */
+@media(max-width:768px){
+
+  .menu-button{
+    display:block;
+    position:absolute;
+    right:20px;
+    top:18px;
+    font-size:26px;
+    color:var(--gold-soft);
+    cursor:pointer;
+  }
+
+  .main-nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:20px;
+    right:20px;
+    background:#08131f;
+    border-radius:12px;
+    padding:20px;
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+
+  body.menu-open .main-nav{
+    display:flex;
+  }
 }
