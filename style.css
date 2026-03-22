@@ -1,15 +1,18 @@
 :root{
-  --gold:#cba234;
-  --gold-soft:#e6c978;
+  --gold:#d2ab43;
+  --gold-soft:#ecd18a;
+  --gold-deep:#b8861b;
 
-  /* deeper luxury navy */
   --bg:#07111d;
   --bg-deep:#030812;
   --bg-card:#0d1828;
-  --bg-card-2:#101d30;
+  --bg-card-2:#122033;
   --bg-footer:#040914;
-  --header-top:rgba(6,16,29,0.96);
-  --header-bottom:rgba(7,19,35,0.88);
+
+  --header-top:rgba(6,16,29,0.58);
+  --header-bottom:rgba(6,16,29,0.34);
+  --header-mobile-top:rgba(5,12,22,0.98);
+  --header-mobile-bottom:rgba(8,18,31,0.95);
 
   --text:#f7f8fb;
   --muted:#c3cddb;
@@ -33,7 +36,7 @@ html{
 body{
   font-family:"Helvetica Neue", Arial, sans-serif;
   background:
-    radial-gradient(circle at top, rgba(18,38,66,0.35), transparent 36%),
+    radial-gradient(circle at top, rgba(20,42,72,0.30), transparent 36%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
   color:var(--text);
   line-height:1.55;
@@ -49,7 +52,6 @@ img{
   max-width:100%;
 }
 
-/* TYPE */
 h1,
 h2,
 h3{
@@ -63,8 +65,12 @@ h3{
   top:0;
   left:0;
   width:100%;
-  background:linear-gradient(180deg, var(--header-top), var(--header-bottom));
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  background:linear-gradient(
+    180deg,
+    var(--header-top),
+    var(--header-bottom)
+  );
+  border-bottom:1px solid rgba(255,255,255,0.04);
   z-index:100;
 }
 
@@ -72,7 +78,7 @@ h3{
   width:100%;
   max-width:var(--max);
   margin:0 auto;
-  padding:14px 24px;
+  padding:10px 24px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -86,7 +92,7 @@ h3{
 }
 
 .brand-logo{
-  width:156px;
+  width:152px;
   height:auto;
 }
 
@@ -95,34 +101,44 @@ h3{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:30px;
+  gap:28px;
 }
 
 .main-nav a{
   font-family:"Helvetica Neue", Arial, sans-serif;
   color:var(--text);
-  font-size:13px;
+  font-size:12px;
   font-weight:700;
-  letter-spacing:0.04em;
+  letter-spacing:0.05em;
   text-transform:uppercase;
-  opacity:0.94;
-  transition:opacity 0.2s ease, transform 0.2s ease;
+  opacity:0.95;
+  transition:opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .main-nav a:hover{
   opacity:1;
+  color:var(--gold-soft);
   transform:translateY(-1px);
 }
 
 .header-phone{
   flex:1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
   text-align:right;
   color:var(--gold-soft);
   font-family:"Helvetica Neue", Arial, sans-serif;
   font-weight:700;
-  font-size:14px;
+  font-size:13px;
   letter-spacing:0.03em;
   white-space:nowrap;
+  transition:opacity 0.2s ease, color 0.2s ease;
+}
+
+.header-phone:hover{
+  opacity:1;
+  color:#f4db98;
 }
 
 /* HOME HERO */
@@ -132,44 +148,45 @@ h3{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:150px 24px 96px;
+  padding:116px 24px 96px;
   background:
-    linear-gradient(rgba(4,10,18,0.40), rgba(4,10,18,0.88)),
+    linear-gradient(rgba(4,10,18,0.42), rgba(4,10,18,0.88)),
     url("hero-city.webp") center/cover no-repeat;
 }
 
 .hero-inner{
   width:100%;
-  max-width:900px;
+  max-width:920px;
   position:relative;
   z-index:2;
 }
 
 .hero h1{
-  font-size:clamp(2.7rem, 6vw, 5rem);
-  line-height:1.02;
-  letter-spacing:-0.04em;
+  font-size:clamp(2.8rem, 6vw, 5.1rem);
+  line-height:1.01;
+  letter-spacing:-0.045em;
   margin-bottom:18px;
   text-wrap:balance;
+  text-shadow:0 6px 26px rgba(0,0,0,0.32);
 }
 
 .hero p{
-  max-width:760px;
+  max-width:780px;
   margin:0 auto 18px;
   color:var(--gold-soft);
-  font-size:clamp(1rem, 2vw, 1.2rem);
+  font-size:clamp(1rem, 2vw, 1.18rem);
   line-height:1.6;
 }
 
 /* SERVICE HERO */
 .service-hero{
-  min-height:74vh;
+  min-height:72vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   position:relative;
-  padding:156px 24px 96px;
+  padding:124px 24px 96px;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -178,7 +195,7 @@ h3{
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(rgba(4,10,18,0.30), rgba(4,10,18,0.84));
+  background:linear-gradient(rgba(4,10,18,0.26), rgba(4,10,18,0.84));
 }
 
 .service-hero .hero-inner{
@@ -190,9 +207,10 @@ h3{
 
 .service-hero h1{
   font-size:clamp(2.5rem, 6vw, 4.3rem);
-  line-height:1.04;
+  line-height:1.03;
   letter-spacing:-0.04em;
   margin-bottom:12px;
+  text-shadow:0 6px 26px rgba(0,0,0,0.30);
 }
 
 .service-hero p{
@@ -222,7 +240,7 @@ h3{
   font-weight:800;
   letter-spacing:0.01em;
   text-align:center;
-  transition:transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  transition:transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover{
@@ -231,13 +249,13 @@ h3{
 }
 
 .gold{
-  background:linear-gradient(180deg, #dfc060 0%, #c79d33 100%);
+  background:linear-gradient(180deg, #ecd18a 0%, #d2ab43 48%, #b8861b 100%);
   color:#08111e;
-  box-shadow:0 10px 26px rgba(199,157,51,0.18);
+  box-shadow:0 12px 28px rgba(184,134,27,0.22);
 }
 
 .outline{
-  border:1px solid rgba(230,201,120,0.85);
+  border:1px solid rgba(236,209,138,0.88);
   color:var(--text);
   background:rgba(255,255,255,0.02);
 }
@@ -272,7 +290,7 @@ h3{
 .service-card{
   display:block;
   background:
-    linear-gradient(180deg, rgba(16,29,48,0.98), rgba(10,18,31,0.98));
+    linear-gradient(180deg, rgba(18,32,51,0.98), rgba(11,20,34,0.98));
   border:1px solid var(--border);
   border-radius:14px;
   padding:28px 24px;
@@ -282,7 +300,7 @@ h3{
 
 .service-card:hover{
   transform:translateY(-3px);
-  border-color:rgba(203,162,52,0.42);
+  border-color:rgba(210,171,67,0.42);
   box-shadow:0 20px 42px rgba(0,0,0,0.34);
 }
 
@@ -444,7 +462,7 @@ textarea{
     align-items:center;
     justify-content:center;
     gap:12px;
-    padding:16px 16px 14px;
+    padding:14px 16px 14px;
   }
 
   .brand{
@@ -483,7 +501,7 @@ textarea{
 
   .hero{
     min-height:auto;
-    padding:92px 20px 156px;
+    padding:88px 20px 156px;
   }
 
   .hero h1{
@@ -498,7 +516,7 @@ textarea{
 
   .service-hero{
     min-height:auto;
-    padding:92px 20px 140px;
+    padding:88px 20px 140px;
   }
 
   .service-hero h1{
@@ -532,7 +550,7 @@ textarea{
     min-height:54px;
     padding:14px 18px;
     border-radius:999px;
-    background:linear-gradient(180deg, #dfc060 0%, #c79d33 100%);
+    background:linear-gradient(180deg, #ecd18a 0%, #d2ab43 48%, #b8861b 100%);
     color:#08111e;
     font-weight:800;
     font-size:15px;
